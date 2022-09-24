@@ -3,37 +3,44 @@ import random
 
 def main():
 
-    score = get_score()
-    if score > 100:
-        get_score()
-    elif score < 0:
-        get_score()
-    print_grade(score)
+    menu = """Please choose one of the following options using the first letter
+(S)core to see your grade or
+(Q)uit"""
+    print(menu)
+    choice = input("Choice:").upper()
+    while choice != "Q":
+        if choice == "S":
+            score = get_score()
 
-    score = random_score()
-    print("Random score:", score)
-    print_grade(score)
+            if score > 100:
+                get_score()
+
+            elif score < 0:
+                get_score()
+            print_grade(score)
+        else:
+            print("Invalid option")
+        print()
+
+        print(menu)
+        choice = input("Choice:").upper()
+
 
 
 def print_grade(score):
     if score >= 90:
-        print("Excellent ")
+        print("Your grade is: Excellent ")
 
     elif score >= 50:
-        print("Passable ")
+        print("Your grade is: Passable ")
 
     else:
-        print("Bad ")
-
-
-def random_score():
-    score = random.randint(0, 100)
-    return score
-
+        print("Your grade is: Bad ")
+    score = int(score)
+    print("*" * score)
 
 def get_score():
-    MENU = """Please input your score (between 0 and 100)"""
-    print(MENU)
+
     score = float(input("Enter score: "))
     return score
 
