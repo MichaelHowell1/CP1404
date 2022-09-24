@@ -1,6 +1,3 @@
-import random
-
-
 def main():
 
     menu = """Please choose one of the following options using the first letter
@@ -37,6 +34,7 @@ def print_grade(score):
         print("Your grade is: Bad ")
     score = int(score)
     print("*" * score)
+
 
 def get_score():
 
