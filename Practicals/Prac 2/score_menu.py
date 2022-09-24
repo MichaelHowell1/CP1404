@@ -26,7 +26,6 @@ def main():
         choice = input("Choice:").upper()
 
 
-
 def print_grade(score):
     if score >= 90:
         print("Your grade is: Excellent ")
