@@ -8,7 +8,7 @@ def main():
 def print_number(star_number):
     while star_number != "Q":
         if star_number == 10:
-            print("**********")
+            print("*" * 10)
             star_number = "Q"
         else:
             password = input("Please enter a 10 digit password: ")
