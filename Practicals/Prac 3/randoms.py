@@ -26,7 +26,7 @@ The smallest number could be 3, the largest could be 9.
 Could line 2 have produced a 4?
 A 4 could not be produced as due to the number step, only odd numbers between 3 and 9 are possible.
 
-Question 3
+Question 3:
 What did you see on line 3?   code = print(random.uniform(2.5, 5.5))  # line 3
 3.79726842173829
 4.667228062559547
@@ -37,8 +37,10 @@ What did you see on line 3?   code = print(random.uniform(2.5, 5.5))  # line 3
 
 What was the smallest number you could have seen, what was the largest?
 The smallest could be 2.5 and the largest could have been 5.5
-
-
-
-
 """
+
+""" Produce random number between 0 and 100 inclusive 
+(import should be at top of file however for readability is instead below"""
+
+import random
+print(random.randint(0, 100))
