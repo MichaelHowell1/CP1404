@@ -8,14 +8,17 @@ If either the numerator or denominator are not integers
 When the denominator = 0
 
 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
-Could add an if statement that if denominator = 0 then it asks for denominator again for valid number,
-    would be viable to fix value error also.
+Could add an if statement that if denominator = 0 then it outputs the fraction as = 0
 """
 
 try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
-    fraction = numerator / denominator
+    """Question 3 code where if denominator is 0 then it changes fraction to 0, otherwise allows calculation as usual"""
+    if denominator == 0:
+        fraction = 0
+    else:
+        fraction = numerator / denominator
     print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
