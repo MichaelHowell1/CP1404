@@ -1,6 +1,7 @@
+""" CP1404 Prac 3 - Exceptions Demo
+Answers to questions about the try function below."""
+
 """
-CP1404/CP5632 - Practical
-Answer the following questions:
 1. When will a ValueError occur?
 If either the numerator or denominator are not integers
 

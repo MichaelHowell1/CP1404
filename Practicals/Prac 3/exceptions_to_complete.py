@@ -1,3 +1,8 @@
+""" CP1404 Prac 3 - Exceptions to Complete
+A program which uses try function to find an appropriate integer to break the while not loop and print valid result.
+"""
+
+
 is_finished = False
 while not is_finished:
     try:
@@ -5,4 +10,4 @@ while not is_finished:
         is_finished = True
     except ValueError:
         print("Please enter a valid integer.")
-print("Valid result is:", result)
+print(f"Valid result is: {result}")

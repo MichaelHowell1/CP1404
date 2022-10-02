@@ -1,3 +1,11 @@
+""" CP1404 Prac 3 - Capitalist Conrad
+Simulates a basic stock price.
+It starts at the defined starting price and every timestep the random function is run to determine
+if there is increase or decrease to the price.
+Once the price reaches the upper or lower limit it breaks the while function and stops the code.
+The starting price, change and limits are defined prior to the while function.
+"""
+
 import random
 
 OUTPUT_FILE = "conrad_output.txt"

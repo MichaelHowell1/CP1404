@@ -1,3 +1,8 @@
+""" CP1404 Prac 3 - Randoms
+Answers to questions for different lines of code shown in the question line, which was run in the console.
+The code uses the random function to print a random number from 0 to 100."""
+
+
 """
 Question 1:
 What did you see on line 1?     code = print(random.randint(5, 20))  # line 1
@@ -40,7 +45,7 @@ The smallest could be 2.5 and the largest could have been 5.5
 """
 
 """ Produce random number between 0 and 100 inclusive 
-(import should be at top of file however for readability is instead below"""
+(import should be at top of file however for readability it is instead below."""
 
 import random
 print(random.randint(0, 100))

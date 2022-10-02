@@ -1,3 +1,6 @@
+""" CP1404 Prac 3 - Password checker
+Asks user for password then checks it with a set criteria to ensure password suitability."""
+
 """changed min length to 3 as cant have 2 characters for 3 different character conditions
 if special character required need min length of 4"""
 MIN_LENGTH = 3
@@ -14,6 +17,7 @@ Your password must be between {MIN_LENGTH} and {MAX_LENGTH}, and contain:
 
 def main():
     """Program to get and check a user's password."""
+
     print(menu)
     if SPECIAL_CHARS_REQUIRED:
         print(f" \t1 or more of the following special characters: {SPECIAL_CHARACTERS}")
@@ -25,10 +29,11 @@ def main():
 
 
 def is_valid_password(password):
+    """ Checks password found with set of criteria explained in menu fore password suitability"""
 
     if MIN_LENGTH > len(password) or len(password) > MAX_LENGTH:
         return False
-
+    breakpoint()
     count_lower = 0
     count_upper = 0
     count_digit = 0
@@ -50,5 +55,6 @@ def is_valid_password(password):
             return False
 
     return True
+
 
 main()

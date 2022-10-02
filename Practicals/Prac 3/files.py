@@ -1,3 +1,6 @@
+""" CP1404 Prac 3 - Files
+Writes and reads specific data to .txt files in the same directory."""
+
 """ Writing the name to file"""
 name = str(input("Please enter your name: "))
 output_file = "name.txt"
@@ -22,6 +25,7 @@ in_file.close()
 """Reading all numbers from file"""
 in_file = open('numbers.txt', 'r')
 total_number = 0
+
 for line_number in in_file:
     number = int(line_number)
     total_number = total_number + number
