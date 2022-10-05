@@ -12,7 +12,7 @@ def main():
 
 
 def get_data():
-    """Read data in lines from file"""
+    """Read data in lines from files"""
     input_file = open("subject_data.txt")
     teacher_data = []
     for line in input_file:
