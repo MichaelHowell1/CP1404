@@ -3,7 +3,7 @@ CP1404/CP5632 Practical
 Data file -> lists program
 """
 
-FILENAME = "subject_data.txt"
+
 
 
 def main():
@@ -12,7 +12,20 @@ def main():
 
 
 def get_data():
-    """Read data from file formatted like: subject,lecturer,number of students."""
+    """Read data in lines from file"""
+    input_file = open("subject_data.txt")
+    teacher_data = []
+    for line in input_file:
+        line = line.strip()
+        parts = line.split(",")
+        parts[2] = int(parts[2])
+        teacher_data += parts
+        print(teacher_data)
+    input_file.close()
+    return
+
+"""def get_data():
+    # Read data from file formatted like: subject,lecturer,number of students.
     input_file = open(FILENAME)
     for line in input_file:
         print(line)  # See what a line looks like
@@ -23,7 +36,7 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
-    input_file.close()
+    input_file.close"""
 
 
 main()
