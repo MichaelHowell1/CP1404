@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 Practical
-List comprehensions
+CP1404 Prac 4 - List Comprehensions
+Further practice of list compressions
 """
 
 names = ["Bob", "Angel", "Jimi", "Alan", "Ada"]
@@ -29,16 +29,21 @@ print(a_names)
 # 'Ada Alan Angel Bob Jimi'
 print(" ".join(sorted(names)))
 
-# TODO: list comprehension to create a list of all the full_names in lowercase format
-# lowercase_full_names =
+"""Print the full names in lower case"""
+lowercase_full_names = [full_names.lower() for full_names in full_names]
+print(lowercase_full_names)
 
+"""Convert the "almost numbers" to integers"""
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
-# TODO: list comprehension to create a list of integers from the above list of strings
-# numbers =
+numbers = [int(almost_number) for almost_number in almost_numbers]
+print(numbers)
 
-# TODO: list comprehension to create a list of only the numbers that are
-# greater than 9 from the numbers (not strings) you just created
+"""Finds numbers greater than 9 from the almost number list"""
+numbers_above_nine = [number for number in numbers if number > 9]
+print(numbers_above_nine)
 
-# TODO: (more advanced) use a list comprehension and the join string method
-# to create a string (not list) of the last names for those full names longer than 11 characters
-# the result should be: 'Harlem, Hendrix, Lovelace'
+"""Finds names above 11 characters and prints the lastnames as a string """
+names_above_eleven = [full_names for full_names in full_names if len(full_names) > 11]
+last_names = [names_above_eleven.split()[1] for names_above_eleven in names_above_eleven]
+print(", ".join(sorted(last_names)))
+
