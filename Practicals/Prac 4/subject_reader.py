@@ -1,42 +1,35 @@
 """
-CP1404/CP5632 Practical
-Data file -> lists program
+CP1404 Prac 4 - Subject Reader
+
 """
 
 
-
-
 def main():
-    data = get_data()
-    print(data)
+    subject_data = get_data()
+    print_subject_data(subject_data)
 
 
 def get_data():
-    """Read data in lines from files"""
+    """Read data in lines from files and save to nested list."""
     input_file = open("subject_data.txt")
-    teacher_data = []
+    subject_data = []
     for line in input_file:
         line = line.strip()
         parts = line.split(",")
         parts[2] = int(parts[2])
-        teacher_data += parts
-        print(teacher_data)
+        subject_data.append(parts)
     input_file.close()
-    return
+    return subject_data
 
-"""def get_data():
-    # Read data from file formatted like: subject,lecturer,number of students.
-    input_file = open(FILENAME)
-    for line in input_file:
-        print(line)  # See what a line looks like
-        print(repr(line))  # See what a line really looks like
-        line = line.strip()  # Remove the \n
-        parts = line.split(',')  # Separate the data into its parts
-        print(parts)  # See what the parts look like (notice the integer is a string)
-        parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        print(parts)  # See if that worked
-        print("----------")
-    input_file.close"""
+
+def print_subject_data(data):
+    """Print data for each subject from the nested list including:
+    subject name, lecturer name and number of students for each class."""
+    for class_number in range(len(data)):
+        subject_name = data[class_number][0]
+        lecturer_name = data[class_number][1]
+        number_of_students = data[class_number][2]
+        print(f"{subject_name} is taught by {lecturer_name} and has {number_of_students} students")
 
 
 main()
