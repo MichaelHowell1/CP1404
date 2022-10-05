@@ -46,4 +46,3 @@ print(numbers_above_nine)
 names_above_eleven = [full_names for full_names in full_names if len(full_names) > 11]
 last_names = [names_above_eleven.split()[1] for names_above_eleven in names_above_eleven]
 print(", ".join(sorted(last_names)))
-
