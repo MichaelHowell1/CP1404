@@ -1,6 +1,6 @@
 """
 CP1404 Prac 4 - Subject Reader
-
+Reads data from "subject_data.txt" file, saves the data then prints the data with context.
 """
 
 
