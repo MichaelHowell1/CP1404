@@ -1,10 +1,11 @@
 """
 CP1404 Prac 4 - Subject Reader
-Reads data from "subject_data.txt" file, saves the data then prints the data with context.
+Reads data from "subject_data.txt" file, saves the subject data then prints the data with context.
 """
 
 
 def main():
+    """Read data and prints it with context"""
     subject_data = get_data()
     print_subject_data(subject_data)
 
