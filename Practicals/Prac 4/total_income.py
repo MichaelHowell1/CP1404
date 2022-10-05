@@ -1,5 +1,5 @@
 """
-CP14014 Prac 4 - Total Income
+CP1404 Prac 4 - Total Income
 Cumulative total income program
 """
 
