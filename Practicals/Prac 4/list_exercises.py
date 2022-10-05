@@ -6,7 +6,7 @@ The first, the last, the smallest, the largest and the average number is printed
 
 total_numbers = int(input("How many numbers? "))
 numbers = []
-for temp in range(total_numbers):
+for number in range(total_numbers):
     number = float(input("Enter a number: "))
     numbers.append(number)
 average_number = sum(numbers)/total_numbers
