@@ -17,10 +17,9 @@ print(f"The smallest number is {min(numbers)}")
 print(f"The largest number is {max(numbers)}")
 print(f"The average number is {average_number}")
 
-""" Section 2 - Security Checker 
-Program to check username from user against a list of accepted usernames.
-"""
 
+# Section 2 - Security Checker
+# Program to check username from user against a list of accepted usernames.
 
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
              'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
