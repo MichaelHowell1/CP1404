@@ -1,5 +1,5 @@
 """
-CP1404 Prac 5 - Michael Howell
+CP1404 Prac 5 - Hex Colours
 Display hexadecimal codes for corresponding colour
 """
 colour_to_code = {"absolute zero": "#0048ba", "acid green": "#b0bf1a", "aliceblue": "#f0f8ff",

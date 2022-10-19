@@ -1,5 +1,5 @@
 """
-CP1404 Prac 5 - Michael Howell
+CP1404 Prac 5 - State Name
 Check abbreviation against matching state names and display
 """
 
