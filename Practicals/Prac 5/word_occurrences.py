@@ -1,5 +1,5 @@
 """
-Cp1404 Prac 5 - Word Occurrences
+CP1404 Prac 5 - Word Occurrences
 Count number of words in a string
 
 Estimate: 30 minutes
