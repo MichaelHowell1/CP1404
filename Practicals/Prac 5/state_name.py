@@ -9,8 +9,10 @@ print(CODE_TO_NAME)
 
 state_code = input("Enter short state: ").upper()
 while state_code != "":
-    if state_code in CODE_TO_NAME:
+    try:
+        state_code in CODE_TO_NAME
         print(f"{state_code:3} is {CODE_TO_NAME[state_code]}")
-    else:
+        state_code = ""
+    except KeyError:
         print("Invalid short state")
-    state_code = input("Enter short state: ").upper()
+        state_code = input("Enter short state: ").upper()
