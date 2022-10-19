@@ -12,7 +12,6 @@ while colour_name != "":
     try:
         colour_name in colour_to_code
         print(f"The code for {colour_name:3} is {colour_to_code[colour_name]}")
-        colour_name = ""
     except KeyError:
         print("Invalid colour name")
     colour_name = input("Enter a colour name or press enter to quit."
