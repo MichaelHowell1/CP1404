@@ -1,6 +1,6 @@
 """
 CP1404 Prac 5 - Michael Howell
-Print state names from abbreviation
+Check abbreviation against matching state names and display
 """
 
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
