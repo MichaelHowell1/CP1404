@@ -3,8 +3,9 @@ CP1404 Prac 6 - Programming Language
 
 
 Estimate: 30 minutes
-Actual:
+Actual: 35 minutes
 """
+
 
 class ProgrammingLanguage:
     """"""
@@ -15,8 +16,8 @@ class ProgrammingLanguage:
         self.reflection = reflection
         self.year = year
 
-    """def is_dynamic(self):"""
-
+    def is_dynamic(self):
+        return self.typing == "Dynamic"
 
     def __str__(self):
         return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
