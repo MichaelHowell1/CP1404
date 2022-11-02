@@ -17,14 +17,15 @@ def main():
         # do something with i (the index) and guitar (the element)"""
 
     guitars = []
-    guitar_name = "default"
+    guitar_name = input("Name: ")
     while guitar_name != "":
 
-        guitar_name = input("Name: ")
         guitar_year = input("Year: ")
         guitar_cost = input("Cost: $")
         current_guitar = Guitar(guitar_name, guitar_year, guitar_cost)
         guitars.append(current_guitar)
         print(f"{guitar_name} ({guitar_year}) : {guitar_cost} added")
+        guitar_name = input("Name: ")
+
 
 main()
