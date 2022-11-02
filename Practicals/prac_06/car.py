@@ -1,4 +1,7 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""
+CP1404 Prac 6 - Car class
+Class for a car used in the "used car" simulation
+"""
 
 
 class Car:
@@ -6,8 +9,10 @@ class Car:
 
     def __init__(self, name="", fuel=0):
         """Initialise a Car instance.
-
-        fuel: float, one unit of fuel drives one kilometre
+        where:
+            name: string, name assigned to car
+            fuel: float, one unit of fuel drives one kilometre
+            odometer: distance car has travelled
         """
         self.name = name
         self.fuel = fuel
@@ -32,4 +37,5 @@ class Car:
         return distance
 
     def __str__(self):
+        """Change class output into readable string."""
         return f"{self.name}, fuel={self.fuel}, odometer={self._odometer}"
