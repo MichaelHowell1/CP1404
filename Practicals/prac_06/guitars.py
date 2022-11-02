@@ -15,14 +15,13 @@ def main():
     guitar_name = input("Name: ")
     while guitar_name != "":
 
-        guitar_year = input("Year: ")
-        guitar_cost = input("Cost: $")
+        guitar_year = int(input("Year: "))
+        guitar_cost = float(input("Cost: $"))
         current_guitar = Guitar(guitar_name, guitar_year, guitar_cost)
         guitars.append(current_guitar)
         print(f"{guitar_name} ({guitar_year}) : {guitar_cost} added")
         guitar_name = input("Name: ")
-    """    guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
-    guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))"""
+
 
     largest_word_length = 0
     for guitar in guitars:
