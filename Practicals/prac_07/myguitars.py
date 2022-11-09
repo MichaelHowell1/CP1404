@@ -9,6 +9,9 @@ from prac_06.guitar import Guitar
 def main():
     """ """
     guitars = get_guitar_data()
+    guitars.sort()
+    for guitar in guitars:
+        print(guitar)
 
 
 def get_guitar_data():

@@ -30,3 +30,7 @@ class Guitar:
     def is_vintage(self):
         """Determine if guitar is vintage"""
         return self.get_age() >= vintage_criteria
+
+    def __lt__(self, other):
+        """Sort list by year"""
+        return self.year < other.year
