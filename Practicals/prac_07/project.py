@@ -17,3 +17,6 @@ class Project:
         """Change class output into readable string."""
         return f"{self.name}, start: {self.start_date}, priority {self.priority}, estimate: ${self.cost_estimate}, " \
                f"completion: {self.completion_percentage}% "
+
+    def __lt__(self, other):
+        return self.priority < other.priority
