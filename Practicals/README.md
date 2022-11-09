@@ -1,4 +1,4 @@
-# Cp1404 Practical
+# Cp1404 Practicals
 
 This repository contains the code for Cp1404 practicals at James Cook University by Michael Howell.
 
