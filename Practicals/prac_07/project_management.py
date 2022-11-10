@@ -29,11 +29,11 @@ Q - Quit
         elif menu_choice == "D":
             display_projects(projects)
         elif menu_choice == "A":
-            add_project()
+            add_project(projects)
         elif menu_choice == "F":
-            filter_project()
+            filter_project(projects)
         elif menu_choice == "U":
-            update_project()
+            update_project(projects)
         else:
             print(f"Invalid menu choice")
         menu_choice = input(menu).upper()
@@ -77,6 +77,18 @@ def display_projects(projects):
     print(f"Complete projects:")
     for project in complete_project:
         print(f"\t{project}")
+
+
+def add_project(projects):
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yyyy): ")
+    priority = int(input("Priority: "))
+    cost_estimate = int(input("Cost estimate: $"))
+    completion_percentage = int(input("Percent complete: "))
+    current_project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+    projects.append(current_project)
+
 
 
 main()
