@@ -3,12 +3,11 @@ CP1404 Prac 7 - Project Management
 
 """
 
-filename = "projects.txt"
 from prac_07.project import Project
+filename = "projects.txt"
 
 
 def main():
-
     menu = """Menu:
 L - Load projects
 S - Save projects 
@@ -23,10 +22,12 @@ Q - Quit
     while menu_choice != "Q":
         if menu_choice == "L":
             projects = load_projects()
+            for project in projects:
+                print(project)
         elif menu_choice == "S":
             save_projects(projects)
         elif menu_choice == "D":
-            display_projects()
+            display_projects(projects)
         elif menu_choice == "A":
             add_project()
         elif menu_choice == "F":
@@ -60,9 +61,22 @@ def save_projects(projects):
                 f"{project.completion_percentage}", file=out_file)
 
 
-
-
-
+def display_projects(projects):
+    complete_project = []
+    incomplete_project = []
+    projects.sort()
+    for project in projects:
+        current_project = project
+        if project.is_complete() is True:
+            complete_project.append(current_project)
+        else:
+            incomplete_project.append(current_project)
+    print(f"Incomplete projects:")
+    for project in incomplete_project:
+        print(f"\t{project}")
+    print(f"Complete projects:")
+    for project in complete_project:
+        print(f"\t{project}")
 
 
 main()
