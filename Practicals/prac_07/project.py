@@ -2,6 +2,7 @@
 CP1404 Prac 7 - Project
 
 """
+completion_criteria = 100
 
 
 class Project:
@@ -20,3 +21,6 @@ class Project:
 
     def __lt__(self, other):
         return self.priority < other.priority
+
+    def is_complete(self):
+        return self.completion_percentage() == completion_criteria
