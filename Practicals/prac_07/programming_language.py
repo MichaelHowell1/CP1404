@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical - Suggested Solution
+CP1404 Prac 7 - Programming Language
 Programming Language class with tests.
 """
 

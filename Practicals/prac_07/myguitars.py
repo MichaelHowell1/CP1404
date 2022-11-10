@@ -1,13 +1,18 @@
 """
 CP1404 Prac 7 - My Guitars
-
+Store and view guitars from file
+Estimate time: 1hr
+Actual timeL 1hr
 """
 
 from prac_06.guitar import Guitar
+
 filename = 'guitars.csv'
 
+
 def main():
-    """ """
+    """Loads and displays guitar information from file then asks user for guitar information and saved to file when
+    complete"""
     guitars = get_guitar_data()
     display_guitars(guitars)
     get_user_guitar(guitars)
@@ -15,8 +20,9 @@ def main():
     save_guitars(guitars)
     print(f"Guitars have been saved")
 
+
 def get_guitar_data():
-    """ """
+    """Loads guitars from file"""
     guitars = []
     with open(filename, 'r') as in_file:
         for line in in_file:
@@ -27,12 +33,13 @@ def get_guitar_data():
 
 
 def display_guitars(guitars):
+    """Displays guitars"""
     for guitar in guitars:
         print(guitar)
 
 
 def get_user_guitar(guitars):
-    """ """
+    """Asks user for guitar and stores in list"""
     guitar_name = input("Name: ")
     while guitar_name != "":
         guitar_year = int(input("Year: "))
@@ -44,11 +51,10 @@ def get_user_guitar(guitars):
 
 
 def save_guitars(guitars):
-    """ """
+    """Saves guitar information to file"""
     with open(filename, 'w') as out_file:
         for guitar in guitars:
             print(f"{guitar.name},{guitar.year},{guitar.cost}", file=out_file)
-
 
 
 main()

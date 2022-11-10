@@ -1,11 +1,12 @@
 """
 CP1404 Prac 7 - Project
-
+Class for project
 """
 completion_criteria = 100
 
 
 class Project:
+    """Represent a Project object."""
     def __init__(self, name, start_date, priority, cost_estimate, completion_percentage):
         """Create a project"""
         self.name = name
@@ -20,7 +21,9 @@ class Project:
                f"completion: {self.completion_percentage}% "
 
     def __lt__(self, other):
+        """Sorts project by priority"""
         return self.priority < other.priority
 
     def is_complete(self):
+        """Checks if completion percentage is 100%"""
         return self.completion_percentage >= completion_criteria
