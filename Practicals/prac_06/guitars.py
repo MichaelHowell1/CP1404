@@ -15,7 +15,6 @@ def main():
     guitars = []
     guitar_name = input("Name: ")
     while guitar_name != "":
-
         guitar_year = int(input("Year: "))
         guitar_cost = float(input("Cost: $"))
         current_guitar = Guitar(guitar_name, guitar_year, guitar_cost)
@@ -29,7 +28,6 @@ def main():
             largest_word_length = len(guitar.name)
 
     for guitar_number, guitar in enumerate(guitars, 1):
-
         vintage_string = "(vintage)" if guitar.is_vintage() is True else ""
         print(f"Guitar {guitar_number}: {guitar.name:>{largest_word_length}} ({guitar.year}), worth "
               f"${guitar.cost:10,.2f} {vintage_string}")
