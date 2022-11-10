@@ -8,9 +8,7 @@ from prac_07.project import Project
 
 
 def main():
-    projects = read_project_data()
-    for project in projects:
-        print(project)
+
     menu = """Menu:
 L - Load projects
 S - Save projects 
@@ -26,7 +24,7 @@ Q - Quit
         if menu_choice == "L":
             projects = load_projects()
         elif menu_choice == "S":
-            save_projects()
+            save_projects(projects)
         elif menu_choice == "D":
             display_projects()
         elif menu_choice == "A":
@@ -51,6 +49,20 @@ def load_projects():
             project = Project(parts[0], parts[1], int(parts[2]), float(parts[3]), int(parts[4]))
             projects.append(project)
     return projects
+
+
+def save_projects(projects):
+    with open(filename, 'w') as out_file:
+        print("Name	Start Date	Priority	Cost Estimate	Completion Percentage")
+        for project in projects:
+            print(
+                f"{project.name}\t,{project.start_date}]\t,{project.priority}\t,{project.cost_estimate}\t,"
+                f"{project.completion_percentage}", file=out_file)
+
+
+
+
+
 
 
 main()
