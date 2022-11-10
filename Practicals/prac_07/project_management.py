@@ -4,6 +4,7 @@ CP1404 Prac 7 - Project Management
 """
 
 from prac_07.project import Project
+import datetime
 filename = "projects.txt"
 
 
@@ -22,8 +23,6 @@ Q - Quit
     while menu_choice != "Q":
         if menu_choice == "L":
             projects = load_projects()
-            for project in projects:
-                print(project)
         elif menu_choice == "S":
             save_projects(projects)
         elif menu_choice == "D":
@@ -31,13 +30,12 @@ Q - Quit
         elif menu_choice == "A":
             add_project(projects)
         elif menu_choice == "F":
-            filter_project(projects)
+            filter_projects(projects)
         elif menu_choice == "U":
-            update_project(projects)
+            update_projects(projects)
         else:
             print(f"Invalid menu choice")
         menu_choice = input(menu).upper()
-    save_to_file(filename, projects)
     print(f"Thank you for using custom-built project management software.")
 
 
@@ -89,6 +87,27 @@ def add_project(projects):
     current_project = Project(name, start_date, priority, cost_estimate, completion_percentage)
     projects.append(current_project)
 
+
+def filter_projects(projects):
+    filter_criteria = input("Show projects that start after date (dd/mm/yyyy): ")
+    filter_date = datetime.datetime.strptime(filter_criteria, "%d/%m/%Y").date()
+    for project in projects:
+        date = datetime.datetime.strptime(project.start_date, "%d/%m/%Y").date()
+        if date > filter_date:
+            print(project)
+
+
+def update_projects(projects):
+    for project_number, project in enumerate(projects):
+        print(f"{project_number} {project}")
+    project_choice = int(input("Project choice: "))
+    for project_number, project in enumerate(projects):
+        if project_choice == project_number:
+            print(project)
+            completion_percentage = int(input("New Percentage: "))
+            priority = int(input("New Priority:"))
+            project.completion_percentage = completion_percentage
+            project.priority = priority
 
 
 main()
