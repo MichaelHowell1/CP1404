@@ -23,4 +23,4 @@ class Project:
         return self.priority < other.priority
 
     def is_complete(self):
-        return self.completion_percentage() == completion_criteria
+        return self.completion_percentage >= completion_criteria
