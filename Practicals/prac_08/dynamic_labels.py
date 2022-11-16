@@ -17,14 +17,14 @@ class DynamicLabelsApp(App):
         self.names = ["Name1", "Name2", "Name3"]
 
     def build(self):
-        """Build the DynamicLabelsApp class from the kv file with Kivy Gui"""
+        """Build the DynamicLabelsApp from the kv file with Kivy Gui"""
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
         self.create_labels()
         return self.root
 
     def create_labels(self):
-        """Create labels from list and display in app"""
+        """Create labels from list and displays in app"""
         for name in self.names:
             temp_label = Label(text=name)
             self.root.ids.main.add_widget(temp_label)

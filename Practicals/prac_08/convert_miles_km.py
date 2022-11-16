@@ -12,10 +12,10 @@ miles_to_km = 1.60934
 
 class MilesConverterApp(App):
     """Kivy App to allow conversion from miles to kilometres"""
-    message = StringProperty()
+    output_km = StringProperty()
 
     def build(self):
-        """build the Kivy MilesConverterApp class from the kv file """
+        """Build the MilesConverterApp Kivy app from the kv file """
         self.title = "Convert Miles to Kilometres"
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
@@ -32,7 +32,7 @@ class MilesConverterApp(App):
         """Convert mile input into km and output to label"""
         value = self.validate_input()
         result = value * miles_to_km
-        self.message = str(result)
+        self.output_km = str(result)
 
     def handle_increment(self, change):
         """Handle incremental change from button up/down press"""
