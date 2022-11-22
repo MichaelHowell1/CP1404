@@ -7,7 +7,7 @@ from prac_09.taxi import Taxi
 
 
 def main():
-    """"""
+    """Client test code for a taxi"""
     # Initial fare
     my_taxi = Taxi("Prius 1", 100, 1.23)
     my_taxi.drive(40)
