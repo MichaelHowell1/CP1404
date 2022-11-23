@@ -14,7 +14,7 @@ def main():
     drive_distance = 18
     my_taxi = SilverServiceTaxi("Hummer", fuel, fanciness)
     my_taxi.drive(drive_distance)
-    print(f"{my_taxi}")
+    print(f"{my_taxi}\nThe cost was ${my_taxi.get_fare():.2f}")
 
 
 main()
