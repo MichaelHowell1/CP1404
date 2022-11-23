@@ -23,6 +23,12 @@ def main():
         if menu_choice == "C":
             print("Taxis available: ")
             display_taxis(taxis)
+            try:
+                taxi_choice = int(input("Choose taxi: "))
+                current_taxi = taxis[taxi_choice]
+            except IndexError:
+                print("Invalid taxi choice")
+
         elif menu_choice == "D":
             if current_taxi is None:
                 print("You need to choose a taxi before you can drive")
@@ -32,12 +38,13 @@ def main():
         else:
             print("Invalid choice")
 
-        menu_choice = input(f"{menu}\n>>> ").upper
+        print(f"Bill to date ${total_bill}")
+        menu_choice = input(f"{menu}\n>>> ").upper()
 
 
 def display_taxis(taxis):
     for taxi_number, taxi in enumerate(taxis):
-        print(taxi)
+        print(f"{taxi_number} - {taxi}")
 
 
 main()
