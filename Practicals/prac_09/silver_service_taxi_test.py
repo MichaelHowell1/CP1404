@@ -12,10 +12,9 @@ def main():
     fuel = 200
     fanciness = 2
     drive_distance = 18
-
     my_taxi = SilverServiceTaxi("Hummer", fuel, fanciness)
     my_taxi.drive(drive_distance)
-    print(f"{my_taxi}\nCurrent fare: ${my_taxi.get_fare()}")
+    print(f"{my_taxi}")
 
 
 main()
